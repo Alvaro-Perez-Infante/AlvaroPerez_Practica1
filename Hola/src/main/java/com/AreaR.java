@@ -9,15 +9,15 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
- * Servlet implementation class Suma
+ * Servlet implementation class AreaR
  */
-public class Suma extends HttpServlet {
+public class AreaR extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Suma() {
+    public AreaR() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,9 +33,9 @@ public class Suma extends HttpServlet {
         String num2 = request.getParameter("num2");
         int num1p = Integer. parseInt(num1);
         int num2p = Integer. parseInt(num2);
-        int suma = num1p + num2p;
+        int area = num1p * num2p;
         out.print("<h1>Resultado</h1>");
-        out.print("El resultado de la suma es: " + suma + ".");
+        out.print("El resultado de el area es: " + area + ".");
         
         out.close();
 	}

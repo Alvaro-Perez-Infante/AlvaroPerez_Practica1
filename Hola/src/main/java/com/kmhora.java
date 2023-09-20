@@ -1,23 +1,23 @@
 package com;
 
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
 /**
- * Servlet implementation class Suma
+ * Servlet implementation class kmhora
  */
-public class Suma extends HttpServlet {
+public class kmhora extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Suma() {
+    public kmhora() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,13 +29,13 @@ public class Suma extends HttpServlet {
 		response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         
-        String num1 = request.getParameter("num1");
-        String num2 = request.getParameter("num2");
-        int num1p = Integer. parseInt(num1);
-        int num2p = Integer. parseInt(num2);
-        int suma = num1p + num2p;
+        String kmh = request.getParameter("kmh");
+        String km = request.getParameter("km");
+        Double kmv = Double. parseDouble(km);
+        Double kmhv = Double. parseDouble(kmh);
+        Double horas = kmv / kmhv;
         out.print("<h1>Resultado</h1>");
-        out.print("El resultado de la suma es: " + suma + ".");
+        out.print("Tardará en recorrer esos kilometros: " + horas + "horas.");
         
         out.close();
 	}

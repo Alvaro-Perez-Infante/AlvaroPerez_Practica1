@@ -26,19 +26,7 @@ public class Saluda extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-//	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		response.setContentType("text/html");
-//        PrintWriter out = response.getWriter();
-//        
-//        String nombre = request.getParameter("nombre");
-//        String apellido = request.getParameter("apellido");
-//        out.print("<h1>GET</h1>");
-//        out.print("Hola, " + nombre + " " + apellido + "!");
-//        
-//        out.close();
-//	}
-	
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         
